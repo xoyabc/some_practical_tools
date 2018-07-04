@@ -87,3 +87,5 @@ OUTPUT:
 [Identifying disks when working with VMware ESXi/ESX](https://kb.vmware.com/s/article/1014953)
 
 [a-list-of-esxcli-storage-commands-you-cant-live-without](https://cormachogan.com/2014/02/25/a-list-of-esxcli-storage-commands-you-cant-live-without/)
+
+[The-top-25-ESX-commands-and-ESXi-commands](https://searchservervirtualization.techtarget.com/tip/The-top-25-ESX-commands-and-ESXi-commands)
