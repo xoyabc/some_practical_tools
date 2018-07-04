@@ -25,7 +25,29 @@
  ```
  ## 虚拟机列表-IP 
  
- https://nocsma.wordpress.com/2016/10/21/esxi-how-to-find-out-vms-ip-address-from-ssh/
+ ``` bash
+1. Connect to your host via SSH
+2. Establish your VM ID
+
+[root@esxi:~] vim-cmd vmsvc/getallvms
+3. Now to find out the VMs IP address run:
+
+[root@esxi:~] vim-cmd vmsvc/get.guest 13 | grep ipAddress
+
+OUTPUT:
+   ipAddress = "10.10.1.109", 
+         ipAddress = (string) [
+            ipAddress = (vim.net.IpConfigInfo.IpAddress) [
+                  ipAddress = "10.10.1.109", 
+                  ipAddress = "fe80::20c:29ff:fec8:db22", 
+            ipAddress = (string) [
+                     ipAddress = "10.10.1.254", 
+                     ipAddress = , 
+                     ipAddress = , 
+                     ipAddress = "fe80::221:55ff:fefb:da4", 
+                     ipAddress = ,
+ 
+ ```
  
  ### ESXI版本：
  ``` bash
@@ -45,6 +67,8 @@
 [finding-hardware-information-using-esxcli](http://masteringvmware.com/esxi-commands-part-2-finding-hardware-information-using-esxcli/)
 
 [esxcli hardware Commands](https://pubs.vmware.com/vsphere-50/index.jsp?topic=%2Fcom.vmware.vcli.ref.doc_50%2Fesxcli_hardware.html)
+
+[esxi-how-to-find-out-vms-ip-address-from-ssh]( https://nocsma.wordpress.com/2016/10/21/esxi-how-to-find-out-vms-ip-address-from-ssh/)
 
 [How to get hardware report of a esxi host](https://communities.vmware.com/thread/459814)
 
