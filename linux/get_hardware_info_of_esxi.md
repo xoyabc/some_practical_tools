@@ -76,3 +76,5 @@ OUTPUT:
 
 [find-the-service-tag-or-serial-number-of-vmware-esx-host](http://www.virtualizetips.com/2010/05/24/find-the-service-tag-or-serial-number-of-vmware-esx-host/)
 
+[networking-commands-for-the-vmware-esxi-host-command-line](https://www.tunnelsup.com/networking-commands-for-the-vmware-esxi-host-command-line/)
+
