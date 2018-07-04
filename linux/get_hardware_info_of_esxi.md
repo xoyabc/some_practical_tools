@@ -19,10 +19,13 @@
  esxcfg-info |grep "Serial Number" |awk -F "[.]" '{print $NF}'
  esxcli hardware platform get |grep 'Serial Number'|awk -F '[:]' '{print $NF}'
  ```
- ### 虚拟机列表： 
+ ### 虚拟机列表-主机名： 
  ```
  esxcli vm process  list |grep 'Display Name'
  ```
+ ## 虚拟机列表-IP 
+ 
+ https://nocsma.wordpress.com/2016/10/21/esxi-how-to-find-out-vms-ip-address-from-ssh/
  
  ### ESXI版本：
  ``` bash
