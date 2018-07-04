@@ -65,8 +65,12 @@ OUTPUT:
  ```
  
  ### 硬盘
- ```
  
+ 单位T
+ 
+ ```
+ df  |awk 'NR>1{sum+=$2}END{printf "%0.2f\n",sum/1024/1024/1024/1024}'
+ esxcli storage core  device list |awk -F '[: ]' '/Size/&&$NF!~/^0/{printf"%0.2f",$NF/1024/1024}'
  ```
  
 
