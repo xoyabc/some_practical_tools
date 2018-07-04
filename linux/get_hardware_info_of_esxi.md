@@ -63,6 +63,12 @@ OUTPUT:
  ``` bash
  esxcli hardware memory get |awk 'NR==1{printf "%0.2f\n",$(NF-1)/1024/1024/1024}'
  ```
+ 
+ ### 硬盘
+ ```
+ 
+ ```
+ 
 
 ### 参考
 
@@ -78,3 +84,6 @@ OUTPUT:
 
 [networking-commands-for-the-vmware-esxi-host-command-line](https://www.tunnelsup.com/networking-commands-for-the-vmware-esxi-host-command-line/)
 
+[Identifying disks when working with VMware ESXi/ESX](https://kb.vmware.com/s/article/1014953)
+
+[a-list-of-esxcli-storage-commands-you-cant-live-without](https://cormachogan.com/2014/02/25/a-list-of-esxcli-storage-commands-you-cant-live-without/)
