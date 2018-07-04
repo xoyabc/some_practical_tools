@@ -11,12 +11,12 @@
  
  ### 机器型号：
  ``` bash
- cat result |grep "Product Name"  |awk -F "[.]" '{print $(NF-1),$NF}'
+ cat result |grep "Product Name"  |awk -F '[.]' '{print $(NF-1),$NF}'
  esxcli hardware platform get |grep 'Product Name'|awk -F '[:]' '{print $NF}'
  ```
  ### 机器序列号
  ```
- esxcfg-info |grep "Serial Number" |awk -F "[.]" '{print $NF}'
+ esxcfg-info |grep "Serial Number" |awk -F '[.]' '{print $NF}'
  esxcli hardware platform get |grep 'Serial Number'|awk -F '[:]' '{print $NF}'
  ```
  ### 虚拟机列表-主机名： 
@@ -61,7 +61,7 @@ OUTPUT:
  ```
  ### 内存：
  ``` bash
- esxcli hardware memory get |awk 'NR==1{printf "%0.2f\n",$(NF-1)/1024/1024/1024}'
+ esxcli hardware memory get |awk 'NR==1{printf '%0.2f\n',$(NF-1)/1024/1024/1024}'
  ```
  
  ### 硬盘
@@ -69,8 +69,8 @@ OUTPUT:
  单位T
  
  ```
- df  |awk 'NR>1{sum+=$2}END{printf "%0.2f\n",sum/1024/1024/1024/1024}'
- esxcli storage core  device list |awk -F '[: ]' '/Size/&&$NF!~/^0/{printf"%0.2f",$NF/1024/1024}'
+ df  |awk 'NR>1{sum+=$2}END{printf '%0.2f\n',sum/1024/1024/1024/1024}'
+ esxcli storage core  device list |awk -F '[: ]' '/Size/&&$NF!~/^0/{printf'%0.2f',$NF/1024/1024}'
  ```
  
 
