@@ -61,7 +61,7 @@ OUTPUT:
  ```
  ### 内存：
  ``` bash
- esxcli hardware memory get |awk 'NR==1{printf '%0.2f\n',$(NF-1)/1024/1024/1024}'
+ esxcli hardware memory get |awk 'NR==1{printf "%0.2f\n",$(NF-1)/1024/1024/1024}'
  ```
  
  ### 硬盘
@@ -69,8 +69,8 @@ OUTPUT:
  单位T
  
  ```
- df  |awk 'NR>1{sum+=$2}END{printf '%0.2f\n',sum/1024/1024/1024/1024}'
- esxcli storage core  device list |awk -F '[: ]' '/Size/&&$NF!~/^0/{printf'%0.2f',$NF/1024/1024}'
+ df  |awk 'NR>1{sum+=$2}END{printf "%0.2f\n",sum/1024/1024/1024/1024}'
+ esxcli storage core  device list |awk -F '[: ]' '/Size/&&$NF!~/^0/{printf "%0.2f",$NF/1024/1024}'
  ```
  
 
