@@ -36,3 +36,11 @@
  ``` bash
  esxcli hardware memory get |awk 'NR==1{printf "%0.2f\n",$(NF-1)/1024/1024/1024}'
  ```
+
+### 参考
+
+[finding-hardware-information-using-esxcli](http://masteringvmware.com/esxi-commands-part-2-finding-hardware-information-using-esxcli/)
+[esxcli hardware Commands](https://pubs.vmware.com/vsphere-50/index.jsp?topic=%2Fcom.vmware.vcli.ref.doc_50%2Fesxcli_hardware.html)
+[How to get hardware report of a esxi host](https://communities.vmware.com/thread/459814)
+[find-the-service-tag-or-serial-number-of-vmware-esx-host](http://www.virtualizetips.com/2010/05/24/find-the-service-tag-or-serial-number-of-vmware-esx-host/)
+
