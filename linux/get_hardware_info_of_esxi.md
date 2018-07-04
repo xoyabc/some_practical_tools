@@ -27,9 +27,11 @@
  
  ``` bash
 1. Connect to your host via SSH
+
 2. Establish your VM ID
 
 [root@esxi:~] vim-cmd vmsvc/getallvms
+
 3. Now to find out the VMs IP address run:
 
 [root@esxi:~] vim-cmd vmsvc/get.guest 13 | grep ipAddress
