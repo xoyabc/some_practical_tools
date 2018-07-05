@@ -49,7 +49,12 @@ OUTPUT:
                      ipAddress = "fe80::221:55ff:fefb:da4", 
                      ipAddress = ,
  
+ 
+ 或
+ vim-cmd vmsvc/get.summary 17(vmid)
  ```
+
+ ### 虚拟机内存
  
  ### ESXI版本：
  ``` bash
@@ -93,3 +98,5 @@ OUTPUT:
 [a-list-of-esxcli-storage-commands-you-cant-live-without](https://cormachogan.com/2014/02/25/a-list-of-esxcli-storage-commands-you-cant-live-without/)
 
 [The-top-25-ESX-commands-and-ESXi-commands](https://searchservervirtualization.techtarget.com/tip/The-top-25-ESX-commands-and-ESXi-commands)
+
+[get-vmid-via-pyvmomi](https://stackoverflow.com/questions/33717752/get-vmid-via-pyvmomi)
