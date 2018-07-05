@@ -58,6 +58,21 @@ OUTPUT:
  
  ``` bash
  vim-cmd vmsvc/get.summary 17
+ 或
+ 单位G，其中10为vmid,可通过vim-cmd vmsvc/getallvms查看
+ vim-cmd vmsvc/device.getdevices 10 |grep memoryMB |awk -F '[, ]' '{printf"%d",$(NF-2)/1024 }'
+ ```
+ 
+ ### 虚拟机硬盘
+ 单位G
+ ``` bash
+ 单位G，其中10为vmid,可通过vim-cmd vmsvc/getallvms查看
+ vim-cmd vmsvc/device.getdevices 10 |grep capacityInKB |awk -F '[, ]' '{sum+=$(NF-2)}END{printf"%d",sum/1024/1024 }'
+ ```
+ 
+ ### 虚拟机CPU核数
+ ```
+ vim-cmd vmsvc/get.summary 10 |grep numCpu |awk -F '[, ]' '{print $(NF-2)}'
  ```
  
  ### ESXI版本：
@@ -104,3 +119,8 @@ OUTPUT:
 [The-top-25-ESX-commands-and-ESXi-commands](https://searchservervirtualization.techtarget.com/tip/The-top-25-ESX-commands-and-ESXi-commands)
 
 [get-vmid-via-pyvmomi](https://stackoverflow.com/questions/33717752/get-vmid-via-pyvmomi)
+
+[获取虚拟机机器信息](http://esx-guy.blogspot.com/2012/03/how-to-query-virtual-machine-from.html)
+
+[VMWareCLI命令参考(很详细)](http://xstarcd.github.io/wiki/Cloud/VMWareCLI.html)
+
