@@ -58,7 +58,7 @@ OUTPUT:
  ### 虚拟机内存
  
  ``` bash
- vim-cmd vmsvc/get.summary 17
+ vim-cmd vmsvc/get.summary 11 | grep  memoryReservation
  或
  单位G，其中10为vmid,可通过vim-cmd vmsvc/getallvms查看
  vim-cmd vmsvc/device.getdevices 10 |grep memoryMB |awk -F '[, ]' '{printf"%d",$(NF-2)/1024 }'
@@ -67,7 +67,8 @@ OUTPUT:
  ### 虚拟机硬盘
  单位G
  ``` bash
- 单位G，其中10为vmid,可通过vim-cmd vmsvc/getallvms查看
+ vim-cmd vmsvc/get.summary 11 | grep -w 'committed' |awk -F '[, ]' '{printf"%d",$(NF-2)/1024/1024/1024 }'
+ 单位G，其中10为vmid,可通过vim-cmd vmsvc/getallvms查看,以第二个为主，是实际分配的
  vim-cmd vmsvc/device.getdevices 10 |grep capacityInKB |awk -F '[, ]' '{sum+=$(NF-2)}END{printf"%d",sum/1024/1024 }'
  ```
  
