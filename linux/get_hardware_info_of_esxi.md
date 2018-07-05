@@ -22,6 +22,7 @@
  ### 虚拟机列表-主机名： 
  ```
  esxcli vm process  list |grep 'Display Name'
+ vim-cmd vmsvc/getallvms
  ```
  ## 虚拟机列表-IP 
  
