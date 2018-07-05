@@ -56,6 +56,10 @@ OUTPUT:
 
  ### 虚拟机内存
  
+ ``` bash
+ vim-cmd vmsvc/get.summary 17
+ ```
+ 
  ### ESXI版本：
  ``` bash
  esxcli system version get |grep Version |awk '{print $NF}'
