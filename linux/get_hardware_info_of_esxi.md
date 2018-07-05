@@ -74,6 +74,8 @@ OUTPUT:
  ### 虚拟机CPU核数
  ```
  vim-cmd vmsvc/get.summary 10 |grep numCpu |awk -F '[, ]' '{print $(NF-2)}'
+ 或
+ vim-cmd vmsvc/device.getdevices 11 |grep numCPU
  ```
  
  ### ESXI版本：
