@@ -33,7 +33,15 @@ PS，当然也可以在cron中使用`SHELL=/bin/bash`声明shell的解释器,也
 ``` bash
 59 11 * * * /bin/bash /scripts/get_douban_hot_movie.sh >> /root/mylog.log 2>&1
 ```
+## 错误分析
 
+### cron error: bad username
+
+该错误提示为/etc/crontab中指定了不存在的用户，本例中为ubuntu，实际该用户并不存在。
+
+![crontab_1.png](https://i.loli.net/2018/08/28/5b8420ddc0988.png)
+![crontab_2.png](https://i.loli.net/2018/08/28/5b8420ddb844b.png)
+![crontab_3.png](https://i.loli.net/2018/08/28/5b8420ddacc8c.png)
 
 ## 参考
 
