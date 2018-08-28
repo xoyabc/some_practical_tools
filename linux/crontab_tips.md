@@ -2,7 +2,7 @@
 
 可以避免每次都在脚本中引入环境变量或使用source初始化
 
-如CentOS,可以在`/var/spool/cron/root`中或使用`crontab -e`添命令加所有使用到的环境变量
+如CentOS,可以在`/var/spool/cron/root`中或使用`crontab -e`命令添加所有使用到的环境变量
 ``` bash
 PATH=/usr/local/nginx/sbin:/usr/local/php/bin:/usr/local/apache/bin:/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 ```
