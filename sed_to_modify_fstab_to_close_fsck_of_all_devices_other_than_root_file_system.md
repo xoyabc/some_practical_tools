@@ -11,7 +11,10 @@ The space- or tab-separated fields within each row (typically aligned in columns
 
 ```bash
 sed -i.bak '/.*\/.*/s/\(2\)\s*$/0/' /etc/fstab 
-sed -ri.bak '/.*\/.*/s/(2)\s*$/0/' /etc/fstab #启用扩展正则(--regexp-extended)
+# 使用扩展正则(--regexp-extended)
+# -i参数后使用".bak"，替换前先备份原文件，备份文件名为原文件名.bak
+# /.*\/.*/ 匹配有挂载点的行，防止修改其他注释行
+sed -ri.bak '/.*\/.*/s/(2)\s*$/0/' /etc/fstab
 sed -ri.bak 's#^(.*)/(.*)(2)(\s*)$#\1/\20\4#g' /etc/fstab
 ```
 
