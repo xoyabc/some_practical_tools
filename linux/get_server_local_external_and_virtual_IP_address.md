@@ -18,3 +18,8 @@ ip a |egrep '\beth[0-9]\b|\blo\b|\bens3[0-9]\b' |grep -E 'secondary|:|ens' |grep
 ip a |egrep '\blo\b' |grep -Ev 127.0.0.1 |awk '{print $2}' |egrep -o '([0-9]{1,3}\.){3}[0-9]{1,3}' |sort -nu |grep -E '1\.|172\.|192\.|10\.'
 ## WAN
 ip a |egrep '\blo\b' |grep -Ev 127.0.0.1 |awk '{print $2}' |egrep -o '([0-9]{1,3}\.){3}[0-9]{1,3}' |sort -nu |grep -Ev '1\.|172\.|192\.|10\.'
+
+# Expand training
+
+https://www.tecmint.com/find-linux-server-public-ip-address/
+
