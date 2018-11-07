@@ -7,6 +7,10 @@ ip a|egrep '\beth[0-9]\b|\bens[0-9]{2}\b'|grep -v secondary|grep brd |awk '$2~/^
 ## WAN
 ip a |egrep '\beth[0-9]\b|\bens3[0-9]\b' |grep -Ev '127.0.0.1|32 scope|secondary|eth[0-9]:' |awk '{print $2}' |egrep -o '([0-9]{1,3}\.){3}[0-9]{1,3}' |grep -Ev '1\.|172\.|192\.|10\.'
 
+wget -T 1 -qO - icanhazip.com
+
+curl http://172.64.170.12 -m 2 --connect-timeout 3 -H 'Host: ifconfig.co'
+
 # VIP: WAN & LAN (eth or ens33)
 ## LAN
 ip a |egrep '\beth[0-9]\b|\blo\b|\bens3[0-9]\b' |grep -E 'secondary|:|ens' |grep -E '32 scope|secondary|eth[0-9]:' |grep -E 'eth[0-9]|ens3[0-9]' |awk '{print $2}' |egrep -o '([0-9]{1,3}\.){3}[0-9]{1,3}' |sort |grep -E '1\.|172\.|192\.|10\.'
@@ -19,7 +23,7 @@ ip a |egrep '\blo\b' |grep -Ev 127.0.0.1 |awk '{print $2}' |egrep -o '([0-9]{1,3
 ## WAN
 ip a |egrep '\blo\b' |grep -Ev 127.0.0.1 |awk '{print $2}' |egrep -o '([0-9]{1,3}\.){3}[0-9]{1,3}' |sort -nu |grep -Ev '1\.|172\.|192\.|10\.'
 
-# Expand training
+# Expand training & REF
 
 https://www.tecmint.com/find-linux-server-public-ip-address/
 
