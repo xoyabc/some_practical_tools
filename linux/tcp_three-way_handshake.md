@@ -5,6 +5,8 @@
 
 ## 极客漫画：TCP 兄弟
 
+[极客漫画：TCP 兄弟 | Linux 中国](https://mp.weixin.qq.com/s/2YEaJAUqLylL0CqWXVpDcA)
+
 ![tcp-buddies.jpg](https://i.loli.net/2018/12/31/5c29072f58347.jpg)
 
 这幅漫画展示了 TCP 协议的沟通过程。首先是构建一个层（TCP 工作于传输层），然后向要通信的人发送建立联系的信号（SYN），接受到信息的人回复确认信息（ACK），确认已经收到，同时，发送建立联系的信息（SYN），这时，它发送的信息就是（SYN-ACK），当最初发送信息的人收到信息后，再回复了确认信息（ACK）。在回复了确认信息后，他们可以正常的交流，就开始说话了。
