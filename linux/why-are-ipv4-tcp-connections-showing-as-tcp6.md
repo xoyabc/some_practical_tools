@@ -79,6 +79,6 @@ REF:
 
 [netstat-why-are-ipv4-daemons-listening-to-ports-listed-only-in-a-inet6](https://unix.stackexchange.com/questions/152612/netstat-why-are-ipv4-daemons-listening-to-ports-listed-only-in-a-inet6)
 
-
+[IPv4-mapped IPv6 addresses](https://www.ibm.com/support/knowledgecenter/SSLTBW_2.1.0/com.ibm.zos.v2r1.hale001/ipv6d0031001726.htm)
 
 
