@@ -72,6 +72,11 @@ to get IPv4.It could represent 10.0.176.93 as ::ffff:10.0.176.93, or even ::ffff
 developers chose to show it as a regular dotted-notation IPv4 address.
 ```
 
+## definition of `IPv4-mapped IPv6 addresses`
+
+These addresses hold an embedded global IPv4 address. They are used to represent the addresses of IPv4 nodes as IPv6 addresses to applications that are enabled for IPv6 and are using AF_INET6 sockets. 
+
+这些地址包含一个嵌入的全局 ipv4 地址。他们将IPv4节点的地址表示为"启用IPv6并使用AF_INET6类型套接字应用程序"的IPv6地址。
 
 REF:
 
