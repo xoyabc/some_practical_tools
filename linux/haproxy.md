@@ -1,5 +1,13 @@
 ## ubuntu 
 
+### 安装包
+
+https://haproxy.debian.net/#?distribution=Ubuntu&release=trusty&version=1.7
+
+### 安装文档
+
+http://www.crium.univ-metz.fr/docs/system/drbd/haproxy.html
+
 ### 版本
 ```
 $haproxy -v
