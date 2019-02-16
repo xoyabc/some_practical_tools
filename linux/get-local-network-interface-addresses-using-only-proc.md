@@ -161,3 +161,9 @@ def get_network_interfaces():
 if __name__ == '__main__':
     print [str(ni) for ni in get_network_interfaces()]
 ```
+
+
+## Ref
+
+
+[get-local-network-interface-addresses-using-only-proc](https://stackoverflow.com/questions/5281341/get-local-network-interface-addresses-using-only-proc)
