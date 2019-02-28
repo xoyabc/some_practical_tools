@@ -47,16 +47,15 @@
 
 for i,v in enumerate(info_list):
 
-```python
-for i,v in enumerate(info_list):
-    if '导演:' in v:
-        print info_list[i+1]
-    elif '主演:' in v:
-        print info_list[i+1]
-    elif '片国家/地区:' in v:
-        print info_list[i+1]
-    elif '语言:' in v:
-        print info_list[i+1]
-    elif 'IMDb链接:' in  v:
-        print info_list[i+1]
-```
+    for i,v in enumerate(info_list):
+        if '导演:' in v:
+            print info_list[i+1]
+        elif '主演:' in v:
+            print info_list[i+1]
+        elif '片国家/地区:' in v:
+            print info_list[i+1]
+        elif '语言:' in v:
+            print info_list[i+1]
+        elif 'IMDb链接:' in  v:
+            print info_list[i+1]
+
