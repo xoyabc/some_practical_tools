@@ -94,18 +94,16 @@ $cat test.file |awk -f crit_log_num.awk
 $cat test.file |awk --re-interval 'BEGIN{num=0}/crit/{timestamp = systime();timestamp2 = timestamp-6600;split ($1,day,"-");split ($2,time,":");$2=null;$1=mktime(day[1]" "day[2]" "day[3]" "time[1]" "time[2]" "time[3]);if($1<=timestamp && $1>timestamp2) {num+=1}}END{print num}'
 4
 ```
+### 你好
 
+<!--ts-->
+      * [时间函数](#时间函数)
+         * [strftime 将时间戳转日期](#strftime-将时间戳转日期)
+         * [将日期转为时间戳](#将日期转为时间戳)
+         * [获取当前时间戳及时间戳互转](#获取当前时间戳及时间戳互转)
+      * [获取最近1小时内critical级别日志条数](#获取最近1小时内critical级别日志条数)
+         * [你好](#你好)
 
+<!-- Added by: root, at: Sun Mar 31 15:12:25 CST 2019 -->
 
-
-
-
-
-
-
-
-
-
-
-
-
+<!--te-->
