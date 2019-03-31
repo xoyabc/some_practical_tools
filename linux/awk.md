@@ -49,11 +49,11 @@ END{
 
 ```plain
 $cat test.file                                            
-2019-03-31 13:07:03 localhost conferenceserver[15152]: crit <gid:17774554>[joinConference.go:129:conferenceserver/service/cms.joinConference] JoinConference from cms failed, url:http://internal-cme-cms-1990838768.cn-north-1.elb.amazonaws.com.cn:9081/cmsrest/rs/conferenceBusiness/join/PC-MEETNOW/864227312,body:<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
-2019-03-31 13:27:03 localhost conferenceserver[15152]: crit cmsrest
-2019-03-31 13:27:03 localhost conferenceserver[15152]: info cmsrest
-2019-03-31 13:27:03 localhost conferenceserver[15152]: crit <gid:17774554>[joinConference.go:129:conferenceserver/service/cms.joinConference] JoinConference from cms failed, url:http://internal-cme-cms-1990838768.cn-north-1.elb.amazonaws.com.cn:9081/cmsrest/rs/conferenceBusiness/join/PC-MEETNOW/864227312,body:<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
-2019-03-31 13:28:03 localhost conferenceserver[15152]: crit <gid:17774554>[joinConference.go:129:conferenceserver/service/cms.joinConference] JoinConference from cms failed, url:http://internal-cme-cms-1990838768.cn-north-1.elb.amazonaws.com.cn:9081/cmsrest/rs/conferenceBusiness/join/PC-MEETNOW/864227312,body:<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+2019-03-31 13:07:03 localhost server[15152]: crit <gid:17774554>[joinConference.go:129:server/Conference] JoinConference from cms failed, url:http://www.test.com/cmsrest/6666666,body:<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+2019-03-31 13:27:03 localhost server[15152]: crit cmsrest
+2019-03-31 13:27:03 localhost server[15152]: info cmsrest
+2019-03-31 13:27:03 localhost server[15152]: crit <gid:17774554>[joinConference.go:129:server/Conference] JoinConference from cms failed, url:http://www.test.com/cmsrest/6666666,body:<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+2019-03-31 13:28:03 localhost server[15152]: crit <gid:17774554>[joinConference.go:129:server/Conference] JoinConference from cms failed, url:http://www.test.com/cmsrest/6666666,body:<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 ```
 
 awk文件内容
