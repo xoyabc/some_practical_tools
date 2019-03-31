@@ -81,6 +81,10 @@ print num
 ```bash
 $cat test.file |awk -f crit_log_num.awk 
 3
+
+或
+$cat test.file |awk --re-interval 'BEGIN{num=0}/crit/{timestamp = systime();timestamp2 = timestamp-6600;split ($1,day,"-");split ($2,time,":");$2=null;$1=mktime(day[1]" "day[2]" "day[3]" "time[1]" "time[2]" "time[3]);if($1<=timestamp && $1>timestamp2) {num+=1}}END{print num}'
+4
 ```
 
 
