@@ -4,7 +4,7 @@ use `gcore pid` command
 
 you can install the gdb package to make the gcore command available.
 
-```
+```bash
 [root@host tmp]# gcore 19765
 [Thread debugging using libthread_db enabled]
 warning: no loadable sections found in added symbol-file system-supplied DSO at 0xb76f3000
@@ -18,7 +18,7 @@ Saved corefile core.19765
 - gdb /usr/local/nginx/sbin/nginx core.19765
 - bt
 
-```
+```bash
 [root@host ~]# cd /tmp/
 [root@host tmp]# gdb /usr/local/nginx/sbin/nginx core.19765
 GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)
