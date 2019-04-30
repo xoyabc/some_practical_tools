@@ -15,8 +15,12 @@ Saved corefile core.19765
 
 ## analyze core file
 
-- gdb /usr/local/nginx/sbin/nginx core.19765
-- bt
+- 1. gdb path_to_executive program path_to_core_file
+
+`gdb /usr/local/nginx/sbin/nginx core.19765`
+
+- 2. press 'bt' and `enter`
+
 
 ```bash
 [root@host ~]# cd /tmp/
