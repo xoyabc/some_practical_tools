@@ -43,6 +43,15 @@
         data = json.loads(html)
         return data
         
+#### convert to json data using urllib2
+```python
+def json_loads(url):
+    response = urllib2.urlopen(url)
+    html=response.read()
+    data = json.loads(html)
+    return data
+```
+
 ## 列表循环
 
 for i,v in enumerate(info_list):
@@ -58,4 +67,22 @@ for i,v in enumerate(info_list):
             print info_list[i+1]
         elif 'IMDb链接:' in  v:
             print info_list[i+1]
+
+
+## 循环字典同时修改数据
+```
+# you cannot iterate while modifying the dict
+# 1, use list(RESULT) to force a copy of keys to be made
+# 2, use deep copy, RESULT.copy()
+```
+
+```python
+1, for m in list(RESULT):
+2, RESULT.copy()
+```
+
+
+
+
+
 
