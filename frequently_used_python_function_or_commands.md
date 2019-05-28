@@ -79,6 +79,12 @@ for i,v in enumerate(info_list):
 ```python
 1, for m in list(RESULT):
 2, RESULT.copy()
+
+for m in RESULT.copy():
+    if k == m:
+        continue
+    else:
+        RESULT[k] = v
 ```
 
 
