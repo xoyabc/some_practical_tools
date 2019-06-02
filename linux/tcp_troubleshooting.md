@@ -11,3 +11,23 @@
 发来的包的时间戳是乱跳的，所以我方的就把带了“倒退”的时间戳的包当作是“recycle的tw连接的重传数据，不是新的请
 求”，于是丢掉不回包，造成大量丢包。
 ```
+
+- tcp 标志位 与 三次握手/四次挥手
+
+https://blog.csdn.net/taoqilin/article/details/79516254
+
+https://blog.csdn.net/wuanwujie/article/details/71439551
+
+```
+SYN(synchronous建立联机) 
+
+ACK(acknowledgement 确认) 
+
+PSH(push传送) 
+
+FIN(finish结束) 
+
+RST(reset重置) 
+
+URG(urgent紧急)
+```
