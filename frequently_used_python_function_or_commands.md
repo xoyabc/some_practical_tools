@@ -1,6 +1,12 @@
 
 ## 从文件中加载列表
 
+文件格式示例
+```
+1 2 3
+4 5 6
+```
+    list_device_group = []
     def load_list_from_file(filepath):
         with open(filepath,'rU') as f:
             for line in f:
