@@ -93,6 +93,42 @@ for m in RESULT.copy():
         RESULT[k] = v
 ```
 
+## 解决 csv 写入中文乱码
+
+如果将包含中文的结果输出到csv文件，一般默认使用Excel打开文件时，文件内容会出现乱码，而使用文本编辑器打开不会乱码。这是因为Excel默认的编码方式为‘GBK‘，而文本编辑器默认的格式为‘utf-8'。
+
+使用codecs包在创建文件后添加语句f.write(codecs.BOM_UTF8)可解
+
+- python 2.7
+
+```python
+import csv
+import codecs
+f = file('test.csv', 'wb')
+# excel打开内容不乱码的核心语句
+f.write(codecs.BOM_UTF8)
+writer = csv.writer(f)
+writer.writerow(['姓名', '年龄', '电话'])
+```
+
+- python 3.x
+
+```python
+with open(filename, 'a', newline='', encoding='utf-8-sig') as f: # 中文需要设置成utf-8格式
+f_csv = csv.writer(f)
+    f_csv.writerow(('城市', '日期', '天气', '风力', '温度', '摄氏度')) # 头部信息
+    f_csv.writerows(data)
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
