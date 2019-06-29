@@ -139,6 +139,9 @@ def line_prepender(filename, line):
         f.write(line.rstrip('\r\n') + '\n' + content)
 ```
 
+head_instruction = "subject_id\ttype\t中文名\t年份\t片长\t评分\t评价人数\t国家\t语言\t类型\t主演\t导演\tIMDB编号"
+line_prepender('test.txt', head_instruction)
+    
 
 
 
