@@ -120,13 +120,24 @@ f_csv = csv.writer(f)
     f_csv.writerows(data)
 ```
 
+## write the list to result file
 
 
+```python
+def write_to_file(file, *info_list):
+    with open(file, 'w')  as f:
+        f.writelines(str(line) + "\n" for line in info_list)
+```
+        
+## insert fisrt line
 
-
-
-
-
+```python
+def line_prepender(filename, line):
+    with open(filename, 'r+') as f:
+        content = f.read()
+        f.seek(0, 0)
+        f.write(line.rstrip('\r\n') + '\n' + content)
+```
 
 
 
