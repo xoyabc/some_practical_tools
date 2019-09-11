@@ -1,0 +1,40 @@
+---
+- hosts: sample
+  remote_user: xiaohui.lou
+  gather_facts: false
+  become: yes
+  tasks:
+    - name: add_user
+      user: 
+        name: "{{ item.username }}"
+        home: /home/{{ item.username }} 
+        uid: "{{ item.uid }}"
+        shell: /bin/bash 
+        state: present
+      with_items:
+        - { username: 'system-root', uid: '1800' }
+
+    - name: mkdir .ssh
+      file: 
+        path: /home/{{ item.username }}/.ssh 
+        state: directory
+        mode: 0700
+        owner: "{{item.username}}"
+        group: "{{item.username}}"
+      with_items:
+        - { username: 'system-root' }
+
+    - name: transfer ssh_pub to server
+      copy: 
+        src: '{{ item.src }}'
+        dest: '{{ item.dest }}'
+        mode: 0600
+        owner: "{{item.username}}"
+        group: "{{item.username}}"
+      with_items:
+        - { src: '/etc/ansible/xiaohui.lou/pub_key/system-root.pub', dest: '/home/system-root/.ssh/authorized_keys', username: 'system-root' }
+
+    - name: add sudoers
+      shell: echo '{{item.username}} ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers.d/99-jumpserver
+      with_items:
+        - { username: 'system-root' }
