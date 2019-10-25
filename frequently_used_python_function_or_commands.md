@@ -166,6 +166,7 @@ TypeError: string indices must be integers
 
 2， data为字符串，非字典类型，即使使用`json.loads()` 转换后也不行，此时需要使用 try 作异常判断。
 
+```python
 In [29]: core_data = 'user with umsUserId=9993006 and userType=125 not found.'                
 
 In [30]: core_data['billingCode']                                                             
@@ -175,7 +176,7 @@ TypeError                                 Traceback (most recent call last)
 ----> 1 core_data['billingCode']
 
 TypeError: string indices must be integers
-
+```
 
 
 
