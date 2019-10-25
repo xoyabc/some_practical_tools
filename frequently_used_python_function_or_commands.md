@@ -141,8 +141,40 @@ def line_prepender(filename, line):
 
 head_instruction = "subject_id\ttype\t中文名\t年份\t片长\t评分\t评价人数\t国家\t语言\t类型\t主演\t导演\tIMDB编号"
 line_prepender('test.txt', head_instruction)
-    
 
+
+## TypeError: string indices must be integers
+
+
+data 为返回数据。
+
+- 1， 需要使用data=json.loads(data)  //将字符串转成json格式，或 data=eval(data)  //将字符串转成dict格式。
+
+```python
+In [38]: s = {'userBasicInfoId': 7714931}                                                     
+
+In [39]: data = json.dumps(s)                                                                 
+
+In [40]: data['userBasicInfoId']                                                              
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-40-1a8a364a2793> in <module>
+----> 1 data['userBasicInfoId']
+
+TypeError: string indices must be integers
+```
+
+2， data为字符串，非字典类型，即使使用`json.loads()` 转换后也不行，此时需要使用 try 作异常判断。
+
+In [29]: core_data = 'user with umsUserId=9993006 and userType=125 not found.'                
+
+In [30]: core_data['billingCode']                                                             
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-30-4b8cc8c94bac> in <module>
+----> 1 core_data['billingCode']
+
+TypeError: string indices must be integers
 
 
 
