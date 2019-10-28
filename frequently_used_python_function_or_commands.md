@@ -178,6 +178,35 @@ TypeError                                 Traceback (most recent call last)
 TypeError: string indices must be integers
 ```
 
+## 列表求交集或共同元素
 
+1，求两个
 
+```python
+def get_common_data(l1, l2):
+    common_list = []
+    for i in l1:
+        if len(list(filter(lambda x: x == i, l2))) > 0:
+            common_list.append(i)
+    return common_list
+```
+
+2，求多个
+
+```python
+def get_common_data_multi(l1, *info_list): 
+    for l in info_list: 
+        common_list = [] 
+        for i in l:
+            if len(list(filter(lambda x: x == i, l1))) > 0:
+                common_list.append(i) 
+        l1 = common_list
+    return common_list
+    
+或（https://www.zhihu.com/question/37422498）
+In [1]: L = [[1,2,3,4], [2,3,4,5], [3,4,5,6],[1,2,3,4,5,6]]
+
+In [2]: set(L[0]).intersection(*L[1:])
+Out[2]: {3, 4}
+```
 
