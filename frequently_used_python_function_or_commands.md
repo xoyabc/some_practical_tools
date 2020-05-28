@@ -182,6 +182,8 @@ TypeError: string indices must be integers
 
 1，求两个
 
+### method 1
+
 ```python
 def get_common_data(l1, l2):
     common_list = []
@@ -189,6 +191,12 @@ def get_common_data(l1, l2):
         if len(list(filter(lambda x: x == i, l2))) > 0:
             common_list.append(i)
     return common_list
+```
+
+### method 2
+
+```python
+[ i for i in a if i in b ]
 ```
 
 2，求多个
