@@ -76,6 +76,9 @@ for i,v in enumerate(info_list):
 
 
 ## 循环字典同时修改数据
+
+[https://stackoverflow.com/questions/6777485/modifying-a-python-dict-while-iterating-over-it](modifying-a-python-dict-while-iterating-over-it)
+
 ```
 # you cannot iterate while modifying the dict
 # 1, use list(RESULT) to force a copy of keys to be made
@@ -86,11 +89,13 @@ for i,v in enumerate(info_list):
 1, for m in list(RESULT):
 2, RESULT.copy()
 
-for m in RESULT.copy():
-    if k == m:
-        continue
-    else:
-        RESULT[k] = v
+for k, v in RESULT_DICT.items():
+    #for m in list(RESULT):
+    for m in RESULT.copy():
+        if k == m:
+            continue
+        else:
+            RESULT[k] = v
 ```
 
 ## 解决 csv 写入中文乱码
