@@ -78,6 +78,7 @@ for i,v in enumerate(info_list):
 ## 循环字典同时修改数据
 
 [https://stackoverflow.com/questions/6777485/modifying-a-python-dict-while-iterating-over-it](modifying-a-python-dict-while-iterating-over-it)
+[https://github.com/51reboot/xly1/blob/master/lesson03/louxiaohui/user_mgt_system_v2_dict_and_file.py](user_mgt_system_v2_dict_and_file.py)
 
 ```
 # you cannot iterate while modifying the dict
