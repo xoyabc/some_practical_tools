@@ -1,7 +1,7 @@
-      traceroute - print the route packets trace to network host
+traceroute - print the route packets trace to network host
       
       
-      This program attempts to trace the route an IP packet would follow to some internet host by launching probe packets  with
+       This program attempts to trace the route an IP packet would follow to some internet host by launching probe packets  with
        a  small  ttl (time to live) then listening for an ICMP "time exceeded" reply from a gateway.  We start our probes with a
        ttl of one and increase by one until we get an ICMP "port unreachable" (or TCP reset), which means we got to the  "host",
        or  hit  a  max (which defaults to 30 hops). Three probes (by default) are sent at each ttl setting and a line is printed
