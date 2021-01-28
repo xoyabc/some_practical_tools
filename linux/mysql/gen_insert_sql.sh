@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Print A Single Quote
+# http://awk.freeshell.org/PrintASingleQuote
+# https://stackoverflow.com/questions/9899001/how-to-escape-a-single-quote-inside-awk
+
 if [ $# -ne 1 ]
 then
     echo "Usage: bash $0 filename"
