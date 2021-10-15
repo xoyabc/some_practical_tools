@@ -30,3 +30,8 @@ awk -v t_num="${total_num}" -v g_num="${group_num}" '
           printf "(\047%s\047, \0470\047);\n", $1;
      }
 }' ${FILE} > ${SQL_FILE}
+
+
+# awk 处理每组首行、中间行、最后一行
+# 使用 sed 保证只有一行或最后一组只有一个数据时末尾为分号
+# awk 'NR%10==1{ printf "INSERT INTO `PreTempConfId` (`tempConfId`, `useFlag`) VALUES (\047%s\047, \0470\047),\n", $1; }NR%10!=0 && NR%10!=1{printf "(\047%s\047, \0470\047),\n", $1;}NR%10==0{printf "(\047%s\047, \0470\047);\n", $1;}' |sed '$s/,$/;/'
